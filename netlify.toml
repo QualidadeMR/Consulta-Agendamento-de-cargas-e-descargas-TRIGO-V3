@@ -1,4 +1,7 @@
 # Static site: no build step needed. index.html lives at the repo root.
+# An explicit no-op command is required: an empty string is ignored and the
+# UI setting ("npm run build") is used instead, which fails because there is
+# no package.json in this repo.
 [build]
-  command = ""
+  command = "echo 'Static site - no build step required'"
   publish = "."
